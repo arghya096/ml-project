@@ -32,7 +32,7 @@ jobs:
 
   deploy:
     needs: build-and-push
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v0.1.7
