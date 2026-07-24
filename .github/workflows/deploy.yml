@@ -26,7 +26,7 @@ jobs:
       - name: Build, tag, and push image
         run: |
           IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/mlflow-server-arghya:latest
-          docker build -t $IMAGE_URI -f build/Dockerfile
+          docker build -t $IMAGE_URI -f build/Dockerfile build/
           docker push $IMAGE_URI
           docker images
 
